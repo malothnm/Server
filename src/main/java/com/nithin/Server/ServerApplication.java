@@ -1,18 +1,23 @@
 package com.nithin.Server;
 
-import in.nmaloth.entity.instrument.Instrument;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.gemfire.config.annotation.CacheServerApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-@CacheServerApplication
-@ComponentScan(basePackageClasses = {Instrument.class,ServerApplication.class})
+@Slf4j
 public class ServerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServerApplication.class, args);
+	public static void main(String[] args) throws InterruptedException {
+
+		ConfigurableApplicationContext ctx = SpringApplication.run(ServerApplication.class, args);
+
+
+
+
 	}
 
 }
+
+
